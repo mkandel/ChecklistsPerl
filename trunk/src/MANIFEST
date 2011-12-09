@@ -1,0 +1,11 @@
+Build.PL
+Changes
+MANIFEST
+MANIFEST.SKIP
+README
+lib/Checklists.pm
+t/00-load.t
+t/00_checklists.t
+t/manifest.t
+t/pod-coverage.t
+t/pod.t

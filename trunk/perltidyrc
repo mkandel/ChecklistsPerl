@@ -1,0 +1,20 @@
+#
+# the standard perltidy rc file
+# for more details perldoc perltidy
+#----------------------------------------------------
+-b         # --backup-and-modify-in-place
+-ce        # --cuddled-else
+-i=4       # --indent-columns
+-l=120     # --maximum-line-length
+-nolq      # --nooutdent-long-quotes
+-nsfs      # --nospace-for-semicolon 
+-pt=0      # --paren-tightness=n
+-sbt=2     # --square-bracket-tightness=n
+-bt=1      # --brace-tightness=n.
+-bbt=0     # --block-brace-tightness=n
+-sot       # --stack-opening-tokens 
+-sct       # --stack-closing-tokens 
+-ci=1      # --continuation-indentation=n
+-nbbc      # --noblanks-before-comments
+-nolc      # --nooutdent-long-lines
+# the end, and they all lived happily ever after.

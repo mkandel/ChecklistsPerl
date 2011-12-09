@@ -1,0 +1,57 @@
+#
+# there are two yinst variables 
+#  Test.loglevel : The strings for the Log level - 
+#     DEBUG INFO WARN ERROR FATAL
+#  Test.logscreen : string for the Appender SCREEN form
+#    ScreenColoredLevels Screen
+# or any other legitimate screen appender type
+#
+log4perl.rootLogger=$(loglevel), SYSLOG, SCREEN
+
+# By default we log only WARN or above to the screen.
+log4perl.appender.SCREEN=Log::Log4perl::Appender::$(logscreen)
+log4perl.appender.SCREEN.Threshold=DEBUG
+log4perl.appender.SCREEN.layout=PatternLayout
+log4perl.appender.SCREEN.layout.ConversionPattern=%p - %m%n
+
+# I think that using a Log::Dispatch::Syslog interface will make the at:
+# http://www.netlinxinc.com/netlinx-blog/52-perl/126-eight-loglog4perl-recipes.html
+# 
+# requires: yinst install ypan/perl-Log-Dispatch
+#
+# syslog is the preferred strategy
+log4perl.appender.SYSLOG           = Log::Dispatch::Syslog
+log4perl.appender.SYSLOG.min_level = debug
+log4perl.appender.SYSLOG.ident     = Test
+log4perl.appender.SYSLOG.facility  = daemon
+log4perl.appender.SYSLOG.layout    = Log::Log4perl::Layout::SimpleLayout
+
+#-----------------------------------------------------------------------------------
+# In case one wants to look at log appenders, one will have to understand
+# that it will be runnable by ONLY the users in the group the product is installed as.
+# Othewise one will have to get Paranoid approval to make the logfile 'world readable'.
+#
+# Notify messages should not be logged to the screen.
+# if you REALLY want to write logfiles, then one could use the
+# log appender of the form:
+###log4perl.appender.LOGFILE=Log::Log4perl::Appender::File
+###log4perl.appender.LOGFILE.filename=$(ROOT)/logs/Test/Test.log
+###log4perl.appender.LOGFILE.mode=append
+###log4perl.appender.LOGFILE.layout=PatternLayout
+###log4perl.appender.LOGFILE.layout.ConversionPattern=[%d][%P][%l] %p - %m%n
+###
+###
+#
+# a log file rotator would be another strategy, if one has a real need to
+# 
+#
+###log4perl.appender.LOG1           = Log::Dispatch::FileRotate
+###log4perl.appender.LOG1.filename  = $(ROOT)/logs/Test/Test.log
+###log4perl.appender.LOG1.mode      = append
+###log4perl.appender.LOG1.autoflush = 1
+###log4perl.appender.LOG1.size      = 10485760
+###log4perl.appender.LOG1.max       = 5
+###log4perl.appender.LOG1.layout    = Log::Log4perl::Layout::PatternLayout
+###log4perl.appender.LOG1.layout.ConversionPattern = %d %p %m %n
+###
+# the end

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : $Id$
+    Location   : $HeadURL$
+    Created On : 08 Dec 2011
+    Created By : mkandel
+    Last Change: $LastChangedDate$
+    Changed By : $Author$
+    Description: Simple Template Example.
+-->
+
+<!-- 
+    Validation routines should be located in Chacklists::Validation.
+    They can live elsewhere but this should be avoided so we can keep
+    all Checklists related code in one SVN repository.
+
+    Validation routines should return 1 if they pass and 0 if they fail.
+-->
+
+<template name="Simple" version="1.0">
+    <item>
+        <name>Item 1</name>
+        <validation>undef</validation>
+    </item>
+    <item>
+        <name>Item 2</name>
+        <validation>Some::Validation->routine_name</validation>
+    </item>
+</template>
