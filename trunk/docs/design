@@ -14,6 +14,10 @@ Checklists::DB - Checklist DB interaction
 
 Checklists::Validation - Checklist "item" validation routines
 
+Checklists::Auth::DB - DB based user authentication
+
+Checklists::Auth::Bouncer - Yahoo! specific Bouncer based user authentication
+
 Checklists::Reports - Generic reporting mechanism
 
 Checklists::ReportParser::Web
@@ -46,3 +50,7 @@ Tables:
         - item_name
         - item_checked - 0 if not checked, 1 if checked
         - item_validation_routine - coderef
+
+Config Options:
+    - templ_path: /home/y/share/checklists/templates (path to templates)
+    - auth_method: (currently supported: DB, Bouncer)
