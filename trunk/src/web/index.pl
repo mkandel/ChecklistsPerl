@@ -13,7 +13,9 @@ local $| = 1;
 ## Includes specific to this project
 use JSON;
 use CGI;
-use lib '/Users/mkandel/src/svn/capdel/sandbox/mkandel/perl_checklists/trunk/src/lib';
+
+use FindBin;
+use lib "$FindBin::Bin/../lib";
 use Checklists;
 
 my $cgi = CGI->new;    # create new CGI object

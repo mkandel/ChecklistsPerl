@@ -1,5 +1,3 @@
-#
-# there are two yinst variables 
 #  Test.loglevel : The strings for the Log level - 
 #     DEBUG INFO WARN ERROR FATAL
 #  Test.logscreen : string for the Appender SCREEN form
@@ -17,8 +15,6 @@ log4perl.appender.SCREEN.layout.ConversionPattern=%p - %m%n
 # I think that using a Log::Dispatch::Syslog interface will make the at:
 # http://www.netlinxinc.com/netlinx-blog/52-perl/126-eight-loglog4perl-recipes.html
 # 
-# requires: yinst install ypan/perl-Log-Dispatch
-#
 # syslog is the preferred strategy
 log4perl.appender.SYSLOG           = Log::Dispatch::Syslog
 log4perl.appender.SYSLOG.min_level = debug

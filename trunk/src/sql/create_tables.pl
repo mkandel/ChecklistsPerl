@@ -1,13 +1,4 @@
 #!/usr/local/bin/perl
-###############################################################################
-# $Id:$
-# $HeadURL:$
-#
-# Copyright (c) 2011 Yahoo!, Inc.
-#
-# create_tables.pl - create the SQLite tables for Checklists
-#
-###############################################################################
 
 =head1 NAME
 
@@ -43,7 +34,7 @@ Marc Kandel C<< <mkandel at yahoo-inc.com> >>
 
 =head1 LICENSE
 
-Copyright 2011 Yahoo!, Inc.
+Copyright 2011 marc
 
 =cut
 use strict;

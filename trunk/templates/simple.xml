@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-    Document   : $Id$
-    Location   : $HeadURL$
-    Created On : 08 Dec 2011
-    Created By : mkandel
-    Last Change: $LastChangedDate$
-    Changed By : $Author$
-    Description: Simple Template Example.
--->
-
 <!-- 
     Validation routines should be located in Chacklists::Validation.
     They can live elsewhere but this should be avoided so we can keep

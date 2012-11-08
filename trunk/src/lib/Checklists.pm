@@ -1,7 +1,3 @@
-#------------------------------------------------------------------------------
-# $Id: Checklists.pm 335396 2011-12-02 20:28:03Z mkandel $
-# $HeadURL: svn+ssh://svn.corp.yahoo.com/yahoo/mail/capdel/sandbox/mkandel/perl_checklists/trunk/src/lib/Checklists.pm $
-#------------------------------------------------------------------------------
 package Checklists;
 
 ## Pragmas
@@ -16,7 +12,8 @@ local $Data::Dumper::Useqq  = 1;
 local $Data::Dumper::Indent = 3;
 
 ## Remove this once this has been packaged
-use lib '/Users/mkandel/src/svn/capdel/sandbox/mkandel/perl_checklists/trunk/src/lib/';
+use FindBin;
+use lib "$FindBin::Bin/../lib";
 ## Internal libraries
 use Checklists::DB;
 
@@ -45,9 +42,8 @@ our $VERSION = '0.01';
 
 =head1 DESCRIPTION
 
-In an effort to reduce time to deliver for Yahoo! Capacity Delivery having
-a web-based, database driven checklist application will reduce said time to
-deliver by minimizing pain when handing off installs from one engineer to
+A web-based, database driven checklist application will reduce said time to
+deliver by minimizing pain when handing off tasks from one engineer to
 another.
 
 =cut
@@ -66,7 +62,7 @@ new()
               Currently the only valid arg is 'debug', enable it
               by passing { debug => 1 } to new().
               
-              Ex: my $db = Yahoo::Capdel::CMTDB->new( { debug => 1 } )
+              Ex: my $db = Checklists->new( { debug => 1 } )
 
               Any other arguments (besides debug) will be silently ignored.
            
@@ -157,10 +153,10 @@ mkandel, C<< <mkandel at yahoo-inc.com> >>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2011 Yahoo Inc.
+Copyright 2011 marc
 
-This Is Restricted Software Developed for Yahoo Inc.
-Copyright (C) 2011 Yahoo Inc. All Rights Reserve.
+This Is Restricted Software Developed for marc
+Copyright (C) 2011 marc All Rights Reserved.
 
 
 The Software shall be used for Good, not Evil.

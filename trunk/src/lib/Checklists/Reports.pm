@@ -1,7 +1,3 @@
-#------------------------------------------------------------------------------
-# $Id$
-# $HeadURL$
-#------------------------------------------------------------------------------
 package Checklists::Reports;
 
 use warnings;
@@ -76,10 +72,10 @@ mkandel, C<< <mkandel at yahoo-inc.com> >>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2011 Yahoo Inc.
+Copyright 2011 marc
 
-This Is Restricted Software Developed for Yahoo Inc.
-Copyright (C) 2011 Yahoo Inc. All Rights Reserve.
+This Is Restricted Software Developed for marc
+Copyright (C) 2011 marc All Rights Reserve.
 
 
 The Software shall be used for Good, not Evil.

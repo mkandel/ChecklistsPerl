@@ -28,25 +28,8 @@ perldoc command.
 
     perldoc Checklists
 
-You can also look for information at:
-
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Checklists
-
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Checklists
-
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Checklists
-
-    Search CPAN
-        http://search.cpan.org/dist/Checklists/
-
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2011 Yahoo Inc.
-
-This Is Restricted Software Developed for Yahoo Inc.
-Copyright (C) 2011 Yahoo Inc. All Rights Reserve.
+Copyright (C) 2011 marc All Rights Reserve.
 
